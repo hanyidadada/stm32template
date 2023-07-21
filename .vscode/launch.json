@@ -1,0 +1,24 @@
+{
+    // 使用 IntelliSense 了解相关属性。 
+    // 悬停以查看现有属性的描述。
+    // 欲了解更多信息，请访问: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Cortex Debug",
+            "cwd": "${workspaceFolder}",
+            "executable": "./build/test01.elf", // path of executable file
+            "request": "launch",
+            "type": "cortex-debug",
+            "runToEntryPoint": "main",
+            "servertype": "openocd",
+            "configFiles": [
+                "interface/cmsis-dap.cfg", // connector of your usb, config file at /usr/share/openocd/scripts
+                "target/stm32f4x.cfg" // mcu of your board
+            ],
+            "armToolchainPath": "/opt/arm-gnu-toolchain/bin", // armToolChain path
+            "svdFile": "STM32F103x.svd",
+            "preLaunchTask": "Build"
+        }
+    ]
+}
