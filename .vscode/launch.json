@@ -6,8 +6,8 @@
     "configurations": [
         {
             "name": "Cortex Debug",
-            "cwd": "${workspaceFolder}",
-            "executable": "./build/test01.elf", // path of executable file
+            "cwd": "${workspaceRoot}",
+            "executable": "./build/stm32template.elf", // path of executable file
             "request": "launch",
             "type": "cortex-debug",
             "runToEntryPoint": "main",
