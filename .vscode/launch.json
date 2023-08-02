@@ -14,10 +14,10 @@
             "servertype": "openocd",
             "configFiles": [
                 "interface/cmsis-dap.cfg", // connector of your usb, config file at /usr/share/openocd/scripts
-                "target/stm32f4x.cfg" // mcu of your board
+                "target/stm32f1x.cfg" // mcu of your board
             ],
             "armToolchainPath": "/opt/arm-gnu-toolchain/bin", // armToolChain path
-            "svdFile": "STM32F103x.svd",
+            "svdFile": "STM32F103xx.svd",
             "preLaunchTask": "Build"
         }
     ]

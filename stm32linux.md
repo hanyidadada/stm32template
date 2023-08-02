@@ -58,11 +58,16 @@ gdb运行还需要python3.8环境库，若无法通过apt直接安装，那么�
 ### 2.VSCode打开生成后的项目
 配置C/C++选项，define选项，按下快捷键Ctrl+Shift+p，输入C/C++然后点击Edit Configurrations(JSON)
 ![这是图片4](.\\pic\\pic6.png )
+
 其中需要定义的选项与Makefile中的定义一致，以此保证VSCode不会报错
+
 ![这是图片4](.\\pic\\pic7.png )
+
 根据需要编写源文件，修改后如有添加文件，记得添加到Makefile文件相应位置
 编写完成后，make执行编译，生成elf，hex和bin文件
+
 ![这是图片4](.\\pic\\pic8.png )
+
 ## 三、OpenOCD烧录
 首先烧录器连上STM32并打开电源，另外单独打开一个终端，输入以下指令
 ```
@@ -98,10 +103,10 @@ exit 关闭连接
             "servertype": "openocd",
             "configFiles": [
                 "interface/cmsis-dap.cfg", // connector of your usb, config file at /usr/share/openocd/scripts
-                "target/stm32f4x.cfg" // mcu of your board
+                "target/stm32f1x.cfg" // mcu of your board
             ],
             "armToolchainPath": "/opt/arm-gnu-toolchain/bin", // armToolChain path
-            "svdFile": "STM32F103x.svd",  //svd文件
+            "svdFile": "STM32F103xx.svd",  //svd文件
             "preLaunchTask": "Build"
         }
     ]
@@ -146,7 +151,7 @@ exit 关闭连接
 				"-f",
 				"target/stm32f1x.cfg",
 				"-c",
-				"program build/${workspaceFolderBasename}.elf verify reset exit"
+				"program build/${workspaceFolder}.elf verify reset exit"
 			],
 			"problemMatcher":"$gcc",
 			"group":"build",
