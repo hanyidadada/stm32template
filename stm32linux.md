@@ -162,3 +162,11 @@ exit 关闭连接
 ```
 ### 3.添加芯片对应的svd文件到项目文件夹
 在<[这个链接](https://github.com/posborne/cmsis-svd)>寻找对应的的svd文件。CMSIS-SVD是CMSIS的一个组件，它包含完整微控制器系统（包括外设）的程序员视图的系统视图描述 XML 文件。简单来说，VS Code可以通过它来知道外设寄存器的地址分布，从而把寄存器内容展示到窗口中。
+
+
+## 注意
+若调试时，一直提示
+```
+Failed to launch OpenOCD GDB Server: Timeout.
+```
+可能是openocd版本不正确，请更新openocd，详情见[链接](https://blog.csdn.net/qq_40839071/article/details/114700646)>
