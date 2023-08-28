@@ -21,6 +21,7 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
+#include "task.h"
 
 /* USER CODE END Includes */
 
@@ -89,16 +90,17 @@ int main(void)
   MX_GPIO_Init();
   MX_USART1_UART_Init();
   /* USER CODE BEGIN 2 */
-
+  int i = 0;
   /* USER CODE END 2 */
-
+  
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   while (1)
   {
+    i = task(i);
     /* USER CODE END WHILE */
     
-    
+
     /* USER CODE BEGIN 3 */
   }
   /* USER CODE END 3 */

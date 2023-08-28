@@ -3,7 +3,8 @@
         {
             "name": "Linux",
             "includePath": [
-                "${workspaceFolder}/**"
+                "${workspaceFolder}/**",
+                "${workspaceFolder}/Core/mytask"
             ],
             "defines": [  // perdefine of your project
                 "USE_HAL_DRIVER",
